@@ -1,0 +1,15 @@
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/bin/Release/net6.0/GeoApi.Application.deps.json
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/bin/Release/net6.0/GeoApi.Application.dll
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/bin/Release/net6.0/GeoApi.Application.pdb
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/bin/Release/net6.0/GeoApi.Domain.dll
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/bin/Release/net6.0/GeoApi.Domain.pdb
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.csproj.AssemblyReference.cache
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.AssemblyInfoInputs.cache
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.AssemblyInfo.cs
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.csproj.CoreCompileInputs.cache
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.csproj.CopyComplete
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.dll
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/refint/GeoApi.Application.dll
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/GeoApi.Application.pdb
+/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/Release/net6.0/ref/GeoApi.Application.dll

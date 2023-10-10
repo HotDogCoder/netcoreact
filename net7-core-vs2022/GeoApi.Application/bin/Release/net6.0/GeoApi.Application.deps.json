@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GeoApi.Application/1.0.0": {
+        "dependencies": {
+          "GeoApi.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GeoApi.Application.dll": {}
+        }
+      },
+      "GeoApi.Domain/1.0.0": {
+        "runtime": {
+          "GeoApi.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GeoApi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GeoApi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

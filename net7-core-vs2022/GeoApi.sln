@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoApi.Domain", "GeoApi.Domain\GeoApi.Domain.csproj", "{B772F366-D937-405D-B9BF-C7DA01F9EB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoApi.Application", "GeoApi.Application\GeoApi.Application.csproj", "{6C6353F7-76B0-42BA-9649-FCB506B2A6B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoApi.Presentation", "GeoApi.Presentation\GeoApi.Presentation.csproj", "{539ACBFC-A927-4198-9CF1-676DACFE7D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoApi.Infrastructure", "GeoApi.Infrastructure\GeoApi.Infrastructure.csproj", "{A497CE5A-3C4B-4E8B-95CC-4EB282994925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B772F366-D937-405D-B9BF-C7DA01F9EB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B772F366-D937-405D-B9BF-C7DA01F9EB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B772F366-D937-405D-B9BF-C7DA01F9EB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B772F366-D937-405D-B9BF-C7DA01F9EB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6353F7-76B0-42BA-9649-FCB506B2A6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6353F7-76B0-42BA-9649-FCB506B2A6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6353F7-76B0-42BA-9649-FCB506B2A6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6353F7-76B0-42BA-9649-FCB506B2A6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539ACBFC-A927-4198-9CF1-676DACFE7D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539ACBFC-A927-4198-9CF1-676DACFE7D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539ACBFC-A927-4198-9CF1-676DACFE7D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539ACBFC-A927-4198-9CF1-676DACFE7D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A497CE5A-3C4B-4E8B-95CC-4EB282994925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A497CE5A-3C4B-4E8B-95CC-4EB282994925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A497CE5A-3C4B-4E8B-95CC-4EB282994925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A497CE5A-3C4B-4E8B-95CC-4EB282994925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
