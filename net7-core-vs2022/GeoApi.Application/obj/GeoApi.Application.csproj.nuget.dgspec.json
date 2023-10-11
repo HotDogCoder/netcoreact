@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/GeoApi.Application.csproj": {}
+    "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/GeoApi.Application.csproj": {}
   },
   "projects": {
-    "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/GeoApi.Application.csproj": {
+    "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/GeoApi.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/GeoApi.Application.csproj",
+        "projectUniqueName": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/GeoApi.Application.csproj",
         "projectName": "GeoApi.Application",
-        "projectPath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/GeoApi.Application.csproj",
+        "projectPath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/GeoApi.Application.csproj",
         "packagesPath": "/Users/ditsy/.nuget/packages/",
-        "outputPath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/obj/",
+        "outputPath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ditsy/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/GeoApi.Domain.csproj": {
-                "projectPath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/GeoApi.Domain.csproj"
+              "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/GeoApi.Domain.csproj": {
+                "projectPath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/GeoApi.Domain.csproj"
               }
             }
           }
@@ -79,18 +79,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/GeoApi.Domain.csproj": {
+    "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/GeoApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/GeoApi.Domain.csproj",
+        "projectUniqueName": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/GeoApi.Domain.csproj",
         "projectName": "GeoApi.Domain",
-        "projectPath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/GeoApi.Domain.csproj",
+        "projectPath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/GeoApi.Domain.csproj",
         "packagesPath": "/Users/ditsy/.nuget/packages/",
-        "outputPath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Domain/obj/",
+        "outputPath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ditsy/.nuget/NuGet/NuGet.Config"
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FJoITT9Oy02j/NwK6NcQrnqg52zctr7/wwIEEpCuZooSGlBPS5OXZBD5L9l1758WSny5jWC3S2XbUOTa0I4E4A==",
+  "dgSpecHash": "ggzmWdM0LnUKq7KEmm2hFPTjkiIlCmUVqbKAdx4YcQ8asMr/DAabGrcOdmL10bD3zD5/z3h2bV56Ffr2VGoDNg==",
   "success": true,
-  "projectFilePath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Application/GeoApi.Application.csproj",
+  "projectFilePath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Application/GeoApi.Application.csproj",
   "expectedPackageFiles": [
     "/Users/ditsy/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/ditsy/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",

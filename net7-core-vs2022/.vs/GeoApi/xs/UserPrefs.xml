@@ -1,51 +1,53 @@
 ﻿<Properties StartupConfiguration="{539ACBFC-A927-4198-9CF1-676DACFE7D71}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GeoApi.Presentation PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GeoApi.Presentation PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="GeoApi.Application/Services/AuthService.cs">
     <Files>
-      <File FileName="GeoApi.Application/Services/AuthService.cs" Line="154" Column="10" />
-      <File FileName="GeoApi.Application/RepositoriesInterfaces/IUserRepository.cs" Line="11" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Application/RepositoriesInterfaces/IRefreshTokenRepository.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Application/Services/GeoApiService.cs" Line="11" Column="17" NotebookId="1" />
-      <File FileName="GeoApi.Domain/GeoApiClass.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Domain/GeoApiFilterClass.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Application/RepositoriesInterfaces/IGeoApiRepository.cs" Line="7" Column="21" NotebookId="1" />
-      <File FileName="GeoApi.Infrastructure/Repositories/UserRepository.cs" Line="48" Column="78" NotebookId="1" />
-      <File FileName="GeoApi.Infrastructure/Contexts/GeoApiDbContext.cs" Line="17" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Infrastructure/Repositories/RefreshTokenRepository.cs" Line="6" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/UserSurveyResponse.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/User.cs" Line="7" Column="9" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/Survey.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/RefreshToken.cs" Line="14" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Presentation/appsettings.json" Line="16" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Presentation/Controllers/AuthController.cs" Line="26" Column="39" NotebookId="1" />
-      <File FileName="GeoApi.Application/ServicesInterfaces/IAuthService.cs" Line="9" Column="34" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/Option.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Domain/Entities/Question.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="GeoApi.Infrastructure/Factories/GeoApiDbContextFactory.cs" Line="15" Column="28" NotebookId="1" />
+      <File FileName="GeoApi.Application/Services/AuthService.cs" Line="135" Column="44" />
+      <File FileName="GeoApi.Application/RepositoriesInterfaces/IUserRepository.cs" NotebookId="1" />
+      <File FileName="GeoApi.Application/RepositoriesInterfaces/IRefreshTokenRepository.cs" NotebookId="1" />
+      <File FileName="GeoApi.Application/Services/GeoApiService.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/GeoApiClass.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/GeoApiFilterClass.cs" NotebookId="1" />
+      <File FileName="GeoApi.Application/RepositoriesInterfaces/IGeoApiRepository.cs" NotebookId="1" />
+      <File FileName="GeoApi.Infrastructure/Repositories/UserRepository.cs" NotebookId="1" />
+      <File FileName="GeoApi.Infrastructure/Contexts/GeoApiDbContext.cs" NotebookId="1" />
+      <File FileName="GeoApi.Infrastructure/Repositories/RefreshTokenRepository.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/UserSurveyResponse.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/User.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/Survey.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/RefreshToken.cs" NotebookId="1" />
+      <File FileName="GeoApi.Presentation/appsettings.json" NotebookId="1" />
+      <File FileName="GeoApi.Presentation/Controllers/AuthController.cs" NotebookId="1" />
+      <File FileName="GeoApi.Application/ServicesInterfaces/IAuthService.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/Option.cs" NotebookId="1" />
+      <File FileName="GeoApi.Domain/Entities/Question.cs" NotebookId="1" />
+      <File FileName="GeoApi.Infrastructure/Factories/GeoApiDbContextFactory.cs" NotebookId="1" />
       <File FileName="GeoApi.Infrastructure/Repositories/GeoApiRepository.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GeoApi" expanded="True">
-            <Node name="GeoApi.Application" expanded="True">
+            <Node name="GeoApi.Application">
               <Node name="RepositoriesInterfaces" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="AuthService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
             </Node>
-            <Node name="GeoApi.Domain" expanded="True">
+            <Node name="GeoApi.Domain">
               <Node name="Entities" expanded="True" />
             </Node>
-            <Node name="GeoApi.Infrastructure" expanded="True">
+            <Node name="GeoApi.Infrastructure">
               <Node name="Contexts" expanded="True" />
               <Node name="Factories" expanded="True" />
               <Node name="Repositories" expanded="True" />
             </Node>
-            <Node name="GeoApi.Presentation" expanded="True">
+            <Node name="GeoApi.Presentation">
               <Node name="Controllers" expanded="True" />
             </Node>
           </Node>
@@ -53,8 +55,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P2HnoJIJu3WISoMdQWoWKZj2JHNjEqVoe1g5+TYBupPA5Py9rSwRZ5nCedHRakwRqdpFDWcbKiZFmCyeMePu3Q==",
+  "dgSpecHash": "BFuG8FtXrYxDDeEcCYhtSWpqXvCaXiAOVvXyhhqZd2H4hUSX6jqA+XLMq4FRGTnPyu1FEzqwcItYiZ1uwmztuQ==",
   "success": true,
-  "projectFilePath": "/Users/ditsy/NetCoreProjects/GeoApi/GeoApi.Infrastructure/GeoApi.Infrastructure.csproj",
+  "projectFilePath": "/Users/ditsy/NetCoreProjects/react-netcore-jwt-localstorage/net7-core-vs2022/GeoApi.Infrastructure/GeoApi.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/ditsy/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/ditsy/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
