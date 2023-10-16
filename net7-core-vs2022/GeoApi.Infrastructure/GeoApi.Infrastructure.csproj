@@ -26,12 +26,14 @@
     <None Remove="Repositories\" />
     <None Remove="Migrations\" />
     <None Remove="Factories\" />
+    <None Remove="Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contexts\" />
     <Folder Include="Repositories\" />
     <Folder Include="Migrations\" />
     <Folder Include="Factories\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

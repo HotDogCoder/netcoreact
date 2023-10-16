@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GeoApi.Infrastructure.Migrations
 {
     [DbContext(typeof(GeoApiDbContext))]
-    [Migration("20231010094735_first_migration")]
-    partial class first_migration
+    [Migration("20231016083605_First")]
+    partial class First
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,9 +103,6 @@ namespace GeoApi.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CreatedById")
-                        .HasColumnType("integer");
-
                     b.Property<int>("CreatedByUserId")
                         .HasColumnType("integer");
 
@@ -113,11 +110,38 @@ namespace GeoApi.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedById");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Surveys");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.SurveyResponse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Intent")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SurveyId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SurveyId");
+
+                    b.ToTable("SurveyResponses");
                 });
 
             modelBuilder.Entity("GeoApi.Domain.Entities.User", b =>
@@ -139,6 +163,37 @@ namespace GeoApi.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.UserSurveyResponse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OptionId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("SurveyResponseId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("TextAnswer")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OptionId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.HasIndex("SurveyResponseId");
+
+                    b.ToTable("UserSurveyResponses");
                 });
 
             modelBuilder.Entity("GeoApi.Domain.Entities.Option", b =>
@@ -165,13 +220,43 @@ namespace GeoApi.Infrastructure.Migrations
 
             modelBuilder.Entity("GeoApi.Domain.Entities.Survey", b =>
                 {
-                    b.HasOne("GeoApi.Domain.Entities.User", "CreatedBy")
+                    b.HasOne("GeoApi.Domain.Entities.User", null)
+                        .WithMany("Surveys")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.SurveyResponse", b =>
+                {
+                    b.HasOne("GeoApi.Domain.Entities.Survey", "Survey")
                         .WithMany()
-                        .HasForeignKey("CreatedById")
+                        .HasForeignKey("SurveyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CreatedBy");
+                    b.Navigation("Survey");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.UserSurveyResponse", b =>
+                {
+                    b.HasOne("GeoApi.Domain.Entities.Option", "Option")
+                        .WithMany()
+                        .HasForeignKey("OptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GeoApi.Domain.Entities.Question", "Question")
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GeoApi.Domain.Entities.SurveyResponse", null)
+                        .WithMany("UserSurveyResponses")
+                        .HasForeignKey("SurveyResponseId");
+
+                    b.Navigation("Option");
+
+                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("GeoApi.Domain.Entities.Question", b =>
@@ -182,6 +267,16 @@ namespace GeoApi.Infrastructure.Migrations
             modelBuilder.Entity("GeoApi.Domain.Entities.Survey", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.SurveyResponse", b =>
+                {
+                    b.Navigation("UserSurveyResponses");
+                });
+
+            modelBuilder.Entity("GeoApi.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Surveys");
                 });
 #pragma warning restore 612, 618
         }

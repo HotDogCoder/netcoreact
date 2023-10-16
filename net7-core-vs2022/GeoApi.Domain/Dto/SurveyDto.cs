@@ -1,13 +1,13 @@
 ﻿using System;
 namespace GeoApi.Domain.Entities
 {
-    public class Survey
+    public class SurveyDto
     {
         public int Id { get; set; }
         public string Title { get; set; }
         public int CreatedByUserId { get; set; }
-        public List<Question> Questions { get; set; }
-        public List<SurveyResponse>? SurveyResponses { get; set; }
+        public List<QuestionDto> Questions { get; set; }
+        public int user_id { get; set; }
     }
 }
 

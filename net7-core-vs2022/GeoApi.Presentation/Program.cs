@@ -11,9 +11,6 @@ using GeoApi.Application.ServicesInterfaces;
 using GeoApi.Application.Services;
 using GeoApi.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-
-
 
 var builder = WebApplication.CreateBuilder(args);
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
@@ -22,7 +19,11 @@ var key = Encoding.ASCII.GetBytes(jwtSettings.GetValue<string>("Key"));
 
 var Configuration = builder.Configuration;
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,14 +33,14 @@ builder.Services.AddScoped<IGeoApiRepository,GeoApiRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
-
+builder.Services.AddScoped<ISurveyRepository, SurveyRepository>();
+builder.Services.AddScoped<ISurveyService, SurveyService>();
+builder.Services.AddScoped<ISurveyResponseRepository, SurveyResponseRepository>();
 
 builder.Services.Configure<WebServiceClientOptions>(builder.Configuration.GetSection("MaxMind"));
 builder.Services.AddHttpClient<WebServiceClient>();
 builder.Services.AddDbContext<GeoApiDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("megane")));
-
-
 
 builder.Services.AddAuthentication(x =>
 {

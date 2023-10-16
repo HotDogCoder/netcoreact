@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GeoApi.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class first_migration : Migration
+    public partial class First : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -49,17 +49,16 @@ namespace GeoApi.Infrastructure.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     CreatedByUserId = table.Column<int>(type: "integer", nullable: false),
-                    CreatedById = table.Column<int>(type: "integer", nullable: false)
+                    UserId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Surveys", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Surveys_Users_CreatedById",
-                        column: x => x.CreatedById,
+                        name: "FK_Surveys_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -77,6 +76,27 @@ namespace GeoApi.Infrastructure.Migrations
                     table.PrimaryKey("PK_Question", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Question_Surveys_SurveyId",
+                        column: x => x.SurveyId,
+                        principalTable: "Surveys",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SurveyResponses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    Intent = table.Column<int>(type: "integer", nullable: false),
+                    SurveyId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SurveyResponses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SurveyResponses_Surveys_SurveyId",
                         column: x => x.SurveyId,
                         principalTable: "Surveys",
                         principalColumn: "Id",
@@ -103,6 +123,39 @@ namespace GeoApi.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "UserSurveyResponses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    QuestionId = table.Column<int>(type: "integer", nullable: false),
+                    TextAnswer = table.Column<string>(type: "text", nullable: true),
+                    OptionId = table.Column<int>(type: "integer", nullable: false),
+                    SurveyResponseId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserSurveyResponses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserSurveyResponses_Option_OptionId",
+                        column: x => x.OptionId,
+                        principalTable: "Option",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserSurveyResponses_Question_QuestionId",
+                        column: x => x.QuestionId,
+                        principalTable: "Question",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserSurveyResponses_SurveyResponses_SurveyResponseId",
+                        column: x => x.SurveyResponseId,
+                        principalTable: "SurveyResponses",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Option_QuestionId",
                 table: "Option",
@@ -114,19 +167,45 @@ namespace GeoApi.Infrastructure.Migrations
                 column: "SurveyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Surveys_CreatedById",
+                name: "IX_SurveyResponses_SurveyId",
+                table: "SurveyResponses",
+                column: "SurveyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Surveys_UserId",
                 table: "Surveys",
-                column: "CreatedById");
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserSurveyResponses_OptionId",
+                table: "UserSurveyResponses",
+                column: "OptionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserSurveyResponses_QuestionId",
+                table: "UserSurveyResponses",
+                column: "QuestionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserSurveyResponses_SurveyResponseId",
+                table: "UserSurveyResponses",
+                column: "SurveyResponseId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "RefreshTokens");
+
+            migrationBuilder.DropTable(
+                name: "UserSurveyResponses");
+
+            migrationBuilder.DropTable(
                 name: "Option");
 
             migrationBuilder.DropTable(
-                name: "RefreshTokens");
+                name: "SurveyResponses");
 
             migrationBuilder.DropTable(
                 name: "Question");
